@@ -19,7 +19,7 @@ const crystalValMin = 1;
 const crystalValMax = 12;
 
 // Global variables
-var gameState;
+var gameState; // 0 = Game loop active, 1 = lose state, 2 = win state
 var targetNumber;
 var crystalSum;
 var aCrystalVal;
@@ -30,10 +30,10 @@ var dCrystalVal;
 // jquery DOM objects
 var $displayTargetNumber = $('#display-target-number');
 var $displayCrystalSum = $('#display-crystal-sum');
-//var $aCrystal = $('#a-crystal');
-//var $bCrystal = $('#b-crystal');
-//var $cCrystal = $('#c-crystal');
-//var $dCrystal = $('#d-crystal');
+var $aCrystal = $('#a-crystal');
+var $bCrystal = $('#b-crystal');
+var $cCrystal = $('#c-crystal');
+var $dCrystal = $('#d-crystal');
 /*
 const $crystalImages = [
     crystal01.svg, crystal02.svg, crystal03.svg, crystal04.svg,
@@ -47,7 +47,10 @@ $(document).ready(function() {
     initGameEnvironment();
     // Start handling click events
     $('.crystal').on('click', function() {
-
+       crystalSum += Number($(this).attr('value'));
+       $displayCrystalSum.text('crystalSum = ' + crystalSum);
+       gameState = checkCrystalSum();
+       console.log('Game State: ' + gameState);
     }) // End .on(click)
 // End Main Game Logic
 
@@ -91,20 +94,30 @@ function genNumber(min, max) {
  */
 function genCrystalValues(min, max) {
     aCrystalVal = genNumber(min, max);
+    $aCrystal.attr('value', aCrystalVal);
     bCrystalVal = genNumber(min, max);
+    $bCrystal.attr('value', bCrystalVal);
     cCrystalVal = genNumber(min, max);
+    $cCrystal.attr('value', cCrystalVal);
     dCrystalVal = genNumber(min, max);
-    
+    $dCrystal.attr('value', dCrystalVal);
+
     // TODO: assign a random .svg from assets/images/crystals/ for each crystal
     // $aCrystal.load('assets/images/crystals/$crystalImages[i])
     // or
     // $aCrystal.attr('src', 'assets/images/crystals/' + 'crystal' + genNumber(1, n) + '.svg');
 } // End genCrystalValues()
 
-/** crystalCounter()
+/** checkCrystalSum()
  * 
  */
-function crystalCounter(crystalValue) {
-
-
-}
+function checkCrystalSum() {
+    if ( crystalSum > targetNumber ) {
+        return 1;
+    }
+    else if ( crystalSum === targetNumber ) {
+        return 2;
+    }
+    else
+        return 0;
+} // End checkCrystalSum()
