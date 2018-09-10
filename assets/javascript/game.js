@@ -21,11 +21,6 @@ const crystalValMax = 12;
 // Global variables
 var gameState; // 0 = Game loop active, 1 = lose state, 2 = win state
 var targetNumber;
-var crystalSum;
-var aCrystalVal;
-var bCrystalVal;
-var cCrystalVal;
-var dCrystalVal;
 
 // jquery DOM objects
 var $displayTargetNumber = $('#display-target-number');
@@ -88,19 +83,15 @@ function genNumber(min, max) {
 } // End genTargetNumber()
 
 /** genCrystalValues()
- *  Generates individual random values for each crystal using genNumber(), storing them in its global variable.
+ *  Generates individual random values for each crystal using genNumber(), storing them in its DOM element's value attribute.
  *  Accepts: minimum value, maximum value
  *  Returns nothing
  */
 function genCrystalValues(min, max) {
-    aCrystalVal = genNumber(min, max);
-    $aCrystal.attr('value', aCrystalVal);
-    bCrystalVal = genNumber(min, max);
-    $bCrystal.attr('value', bCrystalVal);
-    cCrystalVal = genNumber(min, max);
-    $cCrystal.attr('value', cCrystalVal);
-    dCrystalVal = genNumber(min, max);
-    $dCrystal.attr('value', dCrystalVal);
+    $aCrystal.attr('value', genNumber(min, max));
+    $bCrystal.attr('value', genNumber(min, max));
+    $cCrystal.attr('value', genNumber(min, max));
+    $dCrystal.attr('value', genNumber(min, max));
 
     // TODO: assign a random .svg from assets/images/crystals/ for each crystal
     // $aCrystal.load('assets/images/crystals/$crystalImages[i])
@@ -109,7 +100,12 @@ function genCrystalValues(min, max) {
 } // End genCrystalValues()
 
 /** checkCrystalSum()
- * 
+ *  Checks crystalSum against targetNumber and returns a game state.
+ *  Accepts no arguments.
+ *  Returns:
+ *      0 if gameplay is still active.
+ *      1 if in lose state.
+ *      2 if in win state.
  */
 function checkCrystalSum() {
     if ( crystalSum > targetNumber ) {
