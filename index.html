@@ -1,0 +1,77 @@
+<!--
+                            __        __  
+      ____________  _______/ /_____ _/ /  
+     / ___/ ___/ / / / ___/ __/ __ `/ /   
+    / /__/ /  / /_/ (__  ) /_/ /_/ / /    
+    \___/_/   \__, /____/\__/\__,_/_/     
+             /____/         __            
+  _________  / / /__  _____/ /_____  _____
+ / ___/ __ \/ / / _ \/ ___/ __/ __ \/ ___/
+/ /__/ /_/ / / /  __/ /__/ /_/ /_/ / /    
+\___/\____/_/_/\___/\___/\__/\____/_/     
+                                          
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Gem vector attribution:
+    <a href="https://www.vecteezy.com">Free Vectors by www.Vecteezy.com</a>
+    Designed by <a href="https://www.vecteezy.com/">Vecteezy!</a>
+    -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>unit-4-game</title>
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--Reset.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <!--Custom Styling-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="contaner">
+        <div class="row game-info">
+            <div class="col-md-12 game-info-header">
+                <h1>Target Number: </h1>
+                <h1 id="display-target-number">19</h1>
+            </div>
+        </div> <!--End row game-info-->
+
+        <div class="row click-gems">
+            <div class="col-md-3 crystal" id="a-crystal">
+                <img src="assets/images/crystals/crystal01.svg">
+
+            </div>
+
+            <div class="col-md-3 crystal" id="b-crystal">
+                <img src="assets/images/crystals/crystal02.svg">
+
+            </div>
+
+            <div class="col-md-3 crystal" id="c-crystal">
+                <img src="assets/images/crystals/crystal03.svg">
+
+            </div>
+
+            <div class="col-md-3 crystal" id="d-crystal">
+                <img src="assets/images/crystals/crystal04.svg">
+
+            </div>
+
+        </div> <!--End row click-gems-->
+
+        <div class="row player-info">
+            <div class="col-md-12">
+                <h1 id="display-crystal-sum"></h1>
+            </div>
+        </div> <!--End row player-info-->
+
+    </div> <!--End container-->
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
