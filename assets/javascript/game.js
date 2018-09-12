@@ -45,21 +45,9 @@ $(document).ready(function() {
         gameState = checkCrystalSum();
 
         // Handles game state
-        // TODO: This should be a function with gameState is passed in
+        // TODO: This should be a function with gameState passed in
         // Lose state
-        if (gameState === 1) {
-            $displayGameState.html('(；一_一) Went over target number in ' + clickCount + ' clicks. Try to hit the exact target number.');
-            initGameEnvironment();
-        }
-        // Win state
-        else if (gameState === 2) {
-            $displayGameState.html('(づ￣ ³￣)づ Nice! Target number hit in ' + clickCount + ' clicks! Try that again with fewer clicks.');
-            initGameEnvironment();
-        }
-        // Active state
-        else {
-            $displayGameState.html('Keep going');
-        }
+        checkGameState(gameState);
 
     }) // End .on(click)
 // End Main Game Logic
@@ -134,3 +122,23 @@ function checkCrystalSum() {
     else
         return 0;
 } // End checkCrystalSum()
+
+/** checkGameState
+ *  Handles current state of game. Displays state info for player.
+ *  Accepts: game state variable
+ *  Returns nothing.
+ */
+function checkGameState(state) {
+    if (gameState === 1) {
+        $displayGameState.html('(；一_一) Went over target number in ' + clickCount + ' clicks. Try to hit the exact target number.');
+        initGameEnvironment();
+    }
+    // Win state
+    else if (gameState === 2) {
+        $displayGameState.html('(づ￣ ³￣)づ Nice! Target number hit in ' + clickCount + ' clicks! Try that again with fewer clicks.');
+        initGameEnvironment();
+    }
+    // Active state
+    else 
+        $displayGameState.html('Keep going');
+}
