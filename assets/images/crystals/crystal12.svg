@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g id="XMLID_91_">
+	<g>
+		<g id="XMLID_92_">
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="90.3384" y1="-620.2046" x2="146.8848" y2="-620.2046" gradientTransform="matrix(0.8681 -0.4965 0.4965 0.8681 393.9904 759.524)">
+				<stop  offset="0" style="stop-color:#2F1446"/>
+				<stop  offset="0.2978" style="stop-color:#241135"/>
+				<stop  offset="0.6425" style="stop-color:#1C102A"/>
+				<stop  offset="1" style="stop-color:#190F26"/>
+			</linearGradient>
+			<polygon fill="url(#SVGID_1_)" points="200,124.469 178.054,200 190.488,135.849 			"/>
+			<polygon fill="#2B1220" points="149.55,63.476 200,124.469 190.488,135.849 149.634,78.084 			"/>
+			<polygon fill="#803B61" points="114.709,31.812 149.55,63.476 149.634,78.084 108.894,68.079 71.151,51.958 50.024,35.537 
+				11.721,0 66.6,11.899 			"/>
+			
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="35.9111" y1="-703.2466" x2="132.9795" y2="-703.2466" gradientTransform="matrix(0.8681 -0.4965 0.4965 0.8681 393.9904 759.524)">
+				<stop  offset="0" style="stop-color:#C13D84"/>
+				<stop  offset="0.2164" style="stop-color:#9B3274"/>
+				<stop  offset="0.5838" style="stop-color:#61225B"/>
+				<stop  offset="0.8556" style="stop-color:#3D184C"/>
+				<stop  offset="1" style="stop-color:#2F1446"/>
+			</linearGradient>
+			<path fill="url(#SVGID_2_)" d="M149.634,78.084l40.854,57.765l-38.055,45.527l-35.696-18.398
+				c-1.127-0.768-2.301-1.661-3.519-2.646c-26.358-21.367-72.27-90.418-72.27-90.418L40.56,57.596l30.591-5.639l37.743,16.121
+				L149.634,78.084z"/>
+			<polygon fill="#2F1446" points="190.488,135.849 178.054,200 152.434,181.376 			"/>
+			<polygon fill="#270C3D" points="152.434,181.376 178.054,200 138.648,187.751 			"/>
+			<polygon fill="#2B1220" points="138.648,187.751 178.054,200 115.65,190.402 			"/>
+			<polygon fill="#2B1220" points="50.024,35.537 71.151,51.958 40.56,57.596 21.676,45.398 			"/>
+			
+				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="31.353" y1="-824.1167" x2="60.8555" y2="-824.1167" gradientTransform="matrix(0.8681 -0.4965 0.4965 0.8681 393.9904 759.524)">
+				<stop  offset="0" style="stop-color:#C13D84"/>
+				<stop  offset="0.2164" style="stop-color:#9B3274"/>
+				<stop  offset="0.5838" style="stop-color:#61225B"/>
+				<stop  offset="0.8556" style="stop-color:#3D184C"/>
+				<stop  offset="1" style="stop-color:#2F1446"/>
+			</linearGradient>
+			<polygon fill="url(#SVGID_3_)" points="11.721,0 50.024,35.537 21.676,45.398 21.594,41.886 			"/>
+			<polygon fill="#803B61" points="11.721,0 21.594,41.886 21.676,45.398 21.992,57.974 13.089,59.109 0,32.05 			"/>
+			
+				<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="53.7549" y1="-640.623" x2="77.3462" y2="-640.623" gradientTransform="matrix(0.8681 -0.4965 0.4965 0.8681 393.9904 759.524)">
+				<stop  offset="0" style="stop-color:#C13D84"/>
+				<stop  offset="0.2164" style="stop-color:#9B3274"/>
+				<stop  offset="0.5838" style="stop-color:#61225B"/>
+				<stop  offset="0.8556" style="stop-color:#3D184C"/>
+				<stop  offset="1" style="stop-color:#2F1446"/>
+			</linearGradient>
+			<path fill="url(#SVGID_4_)" d="M116.737,162.978l35.696,18.398l-13.785,6.375l-25.43-27.419
+				C114.437,161.316,115.61,162.21,116.737,162.978z"/>
+			<polygon fill="#803B61" points="21.676,45.398 40.56,57.596 40.949,69.914 21.992,57.974 			"/>
+			<path fill="#4E253C" d="M113.219,160.332l25.43,27.419l-22.998,2.651L14.27,61.546l-1.181-2.437l8.903-1.135l18.957,11.94
+				C40.949,69.914,86.86,138.965,113.219,160.332z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -25,17 +25,11 @@ var targetNumber;
 // jquery DOM objects
 var $displayTargetNumber = $('#display-target-number');
 var $displayCrystalSum = $('#display-crystal-sum');
+var $displayGameState = $('#display-game-state');
 var $aCrystal = $('#a-crystal');
 var $bCrystal = $('#b-crystal');
 var $cCrystal = $('#c-crystal');
 var $dCrystal = $('#d-crystal');
-/*
-const $crystalImages = [
-    crystal01.svg, crystal02.svg, crystal03.svg, crystal04.svg,
-    crystal05.svg, crystal06.svg, crystal07.svg, crystal08.svg,
-    crystal09.svg, crystal10.svg, crystal11.svg, crystal12.svg,
-];
-*/
 
 // Main Game Logic
 $(document).ready(function() { 
@@ -43,8 +37,25 @@ $(document).ready(function() {
     // Start handling click events
     $('.crystal').on('click', function() {
        crystalSum += Number($(this).attr('value'));
-       $displayCrystalSum.text('crystalSum = ' + crystalSum);
+       $displayCrystalSum.text(crystalSum);
        gameState = checkCrystalSum();
+       // Lose state
+       if (gameState === 1) {
+           initGameEnvironment();
+           $displayGameState.html('Over target number, try again');
+
+       }
+       // Win state
+       else if (gameState === 2) {
+           initGameEnvironment();
+           $displayGameState.html('Hit target number, try again');
+
+       }
+       // Active state
+       else {
+           $displayGameState.html('Keep going');
+       }
+
        console.log('Game State: ' + gameState);
     }) // End .on(click)
 // End Main Game Logic
@@ -67,7 +78,7 @@ function initGameEnvironment() {
     genCrystalValues(crystalValMin, crystalValMax);
 
     $displayTargetNumber.html(targetNumber);
-    $displayCrystalSum.html('crystalSum = ' + crystalSum);
+    $displayCrystalSum.html(crystalSum);
 
 } // End initGameEnvironment()
 
@@ -92,6 +103,7 @@ function genCrystalValues(min, max) {
     $bCrystal.attr('value', genNumber(min, max));
     $cCrystal.attr('value', genNumber(min, max));
     $dCrystal.attr('value', genNumber(min, max));
+
 
     // TODO: assign a random .svg from assets/images/crystals/ for each crystal
     // $aCrystal.load('assets/images/crystals/$crystalImages[i])
