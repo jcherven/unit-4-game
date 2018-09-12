@@ -21,6 +21,7 @@ const crystalValMax = 12;
 // Global variables
 var gameState; // 0 = Game loop active, 1 = lose state, 2 = win state
 var targetNumber;
+var clickCount;
 
 // jquery DOM objects
 var $displayTargetNumber = $('#display-target-number');
@@ -36,27 +37,30 @@ $(document).ready(function() {
     initGameEnvironment();
     // Start handling click events
     $('.crystal').on('click', function() {
-       crystalSum += Number($(this).attr('value'));
-       $displayCrystalSum.text(crystalSum);
-       gameState = checkCrystalSum();
-       // Lose state
-       if (gameState === 1) {
-           initGameEnvironment();
-           $displayGameState.html('Over target number, try again');
+        clickCount++;
+        // Increments crystalSum by the value of the clicked crystal
+        crystalSum += Number($(this).attr('value'));
+        $displayCrystalSum.text(crystalSum);
+        // Sets game state 
+        gameState = checkCrystalSum();
 
-       }
-       // Win state
-       else if (gameState === 2) {
-           initGameEnvironment();
-           $displayGameState.html('Hit target number, try again');
+        // Handles game state
+        // TODO: This should be a function with gameState is passed in
+        // Lose state
+        if (gameState === 1) {
+            $displayGameState.html('(；一_一) Went over target number in ' + clickCount + ' clicks. Try to hit the exact target number.');
+            initGameEnvironment();
+        }
+        // Win state
+        else if (gameState === 2) {
+            $displayGameState.html('(づ￣ ³￣)づ Nice! Target number hit in ' + clickCount + ' clicks! Try that again with fewer clicks.');
+            initGameEnvironment();
+        }
+        // Active state
+        else {
+            $displayGameState.html('Keep going');
+        }
 
-       }
-       // Active state
-       else {
-           $displayGameState.html('Keep going');
-       }
-
-       console.log('Game State: ' + gameState);
     }) // End .on(click)
 // End Main Game Logic
 
@@ -71,6 +75,7 @@ $(document).ready(function() {
  *  Returns nothing.
  */
 function initGameEnvironment() {
+    clickCount = 0;
     gameState = 0;
     targetNumber = genNumber(targetNumberMin, targetNumberMax);
     crystalSum = 0;

@@ -8,10 +8,6 @@ body {
     font-family: 'Shrikhand', cursive;
 }
 
-#player-info-label {
-    font-family: 'Shrikhand', cursive;
-}
-
 #display-target-number {
     font-family: 'Shrikhand', cursive;
     font-size: 3em;
@@ -34,4 +30,12 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
+}
+
+.player-info-label {
+    font-family: 'Khula', sans-serif;
+}
+
+#display-game-state {
+    font-family: 'Khula', sans-serif;
 }
