@@ -43,15 +43,9 @@ $(document).ready(function() {
         $displayCrystalSum.text(crystalSum);
         // Sets game state 
         gameState = checkCrystalSum();
-
         // Handles game state
-        // TODO: This should be a function with gameState passed in
-        // Lose state
         checkGameState(gameState);
-
     }) // End .on(click)
-// End Main Game Logic
-
 }) // End .ready()
 
 /**************************
@@ -97,7 +91,6 @@ function genCrystalValues(min, max) {
     $cCrystal.attr('value', genNumber(min, max));
     $dCrystal.attr('value', genNumber(min, max));
 
-
     // TODO: assign a random .svg from assets/images/crystals/ for each crystal
     // $aCrystal.load('assets/images/crystals/$crystalImages[i])
     // or
@@ -141,4 +134,4 @@ function checkGameState(state) {
     // Active state
     else 
         $displayGameState.html('Keep going');
-}
+} // End checkGameState()
